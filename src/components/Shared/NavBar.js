@@ -84,6 +84,7 @@ const NavBarContainer = styled.div`
       transform: scaleX(1);
     }
   }
+
 `
 
 export default NavBar;

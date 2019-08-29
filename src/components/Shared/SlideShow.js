@@ -104,6 +104,20 @@ const Slider = styled.div`
 
   }
 
+  @media (max-width: 768px) {
+    height: 90vh;
+
+    .slide .slide-content {
+      bottom: -300px;
+      left: 0;
+      width: 100%;
+    }
+    .slide.current .slide-content {
+      transform: translateY(-300px)
+    }
+  }
+
+
 `
 
 
