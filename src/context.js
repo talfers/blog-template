@@ -97,6 +97,30 @@ class ProductProvider extends React.Component {
     setInterval(this.slideCounter, 6000);
   };
 
+  parseCats = (blogs) => {
+    let arrays = blogs.map(blog => {
+      return blog.categories;
+    })
+    let categories = [];
+    arrays.forEach(arr => {
+      categories = arr.concat(categories);
+    })
+    let parsedCats = [];
+    // console.log(categories);
+    let n = 0;
+    categories.forEach(cat => {
+      if(parsedCats.includes(cat)){
+        return null
+      } else {
+        parsedCats.push(Object.assign({
+          id: n,
+          title: cat,
+        }))
+      }
+    })
+    return parsedCats;
+  }
+
   render () {
     return(
       <ProductContext.Provider value={{
@@ -104,7 +128,8 @@ class ProductProvider extends React.Component {
           handleDetail: this.handleDetail,
           nextSlide: this.nextSlide,
           prevSlide: this.prevSlide,
-          slideInterval: this.slideInterval
+          slideInterval: this.slideInterval,
+          parseCats: this.parseCats
 
         }}
       >

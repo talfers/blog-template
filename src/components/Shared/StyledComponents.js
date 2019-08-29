@@ -11,6 +11,10 @@ export const ContentContainer = styled.div`
   display: flex;
   width: 100%;
   margin-top: 24px;
+
+  @media (max-width: 1068px) {
+      flex-direction: column;
+    }
 `
 
 export const PageContent = styled.div`
@@ -27,6 +31,10 @@ export const AsideContent = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 0 0 20px;
+
+  @media (max-width: 1068px) {
+      margin: 24px 0 0 0;
+    }
 `
 
 export const Hero = styled.div`
