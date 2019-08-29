@@ -42,6 +42,10 @@ const CardItem = styled.div`
     box-shadow: 0px 0px 6px 0px grey;
   }
 
+  @media (max-width: 768px) {
+    box-shadow: 0px 0px 6px 0px grey;
+  }
+
   img {
     max-height: 70%;
     width: 100%;
